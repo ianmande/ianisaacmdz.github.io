@@ -3,10 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?lylkzd');
+    src:  url('fonts/icomoon.eot?lylkzd#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?lylkzd') format('truetype'),
+      url('fonts/icomoon.woff?lylkzd') format('woff'),
+      url('fonts/icomoon.svg?lylkzd#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e9bd";
+       font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
 .presentation-container{
     display: grid;
     grid-template: 1fr / 1.1fr 0.9fr;
     height: 100vh;
+}
+.menu{
+    background: tomato;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    position: fixed;
+    right: 40px;
+    top:30px;
+    cursor: pointer;
 }
 .presentation-left{
     background-color: #3B3D3C;
@@ -70,3 +125,5 @@
     transform: scale(.95);
     transition: .2s;
 }
+
+
