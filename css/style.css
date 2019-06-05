@@ -3,10 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?lylkzd');
+    src:  url('fonts/icomoon.eot?lylkzd#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?lylkzd') format('truetype'),
+      url('fonts/icomoon.woff?lylkzd') format('woff'),
+      url('fonts/icomoon.svg?lylkzd#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e9bd";
+       font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
 .presentation-container{
     display: grid;
     grid-template: 1fr / 1.1fr 0.9fr;
     height: 100vh;
+}
+.menu{
+    background: tomato;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    position: fixed;
+    right: 40px;
+    top:30px;
+    cursor: pointer;
 }
 .presentation-left{
     background-color: #3B3D3C;
@@ -15,7 +70,10 @@
     grid-template: 200px 1fr/ 1fr;
 }
 .presentation-name{
-    margin: 20px;
+    padding: 40px 80px;
+    font-size: 2.2em;
+    font-weight: 800;
+    font-family: 'Kaushan Script', cursive;
 }
 .presentation-img{
     width: 500px;
@@ -27,21 +85,37 @@
     grid-template: 350px 1fr/ 1fr;
 }
 .presentation-slogan{
-    margin: 20px;
-    justify-self: end;
+    padding: 40px;
+    font-size: 1.5em;
+    font-family: cursive;
 }
 .presentation-welcome-container{
     width: 70%;
+    height: 100%;
     justify-self: center;
+}
+.presentation-welcome{
+    margin: 0  0 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Inconsolata', monospace;
+}
+.presentation-my-description{
+    margin: 20px 0;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: 'Raleway', cursive;
 }
 .presentation-button{
     color: #fff;
     background:rgb(51, 51, 51);
     border-radius: 6%;
     padding: 8px;
-    margin: 19px;
+    margin: 0 10px;
     text-decoration: none;
     display: inline-block;
+    font-size: .9em;
+    font-family: 'Raleway', cursive;
 }
 .presentation-button:hover{
     background:rgb(66, 66, 66);
@@ -51,3 +125,5 @@
     transform: scale(.95);
     transition: .2s;
 }
+
+
