@@ -41,7 +41,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+/* estilos que repito mucho*/
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* estilos que repito mucho*/
+
 .presentation-container{
     display: grid;
     grid-template: 1fr / 1.1fr 0.9fr;
@@ -51,9 +58,6 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 25px;
     position: fixed;
     right: 0;
@@ -299,7 +303,8 @@
     margin: 5%;
     display: grid;
 }
-.projects-title{
+.projects-title, 
+.contact-title{
     font-size: 30px;
     font-weight: bold;
     font-family: 'Inconsolata', monospace;
@@ -340,7 +345,4 @@
     bottom:0;
     left:0;
     right:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
