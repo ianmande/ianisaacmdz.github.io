@@ -5,11 +5,11 @@
 }
 @font-face {
     font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?lylkzd');
-    src:  url('fonts/icomoon.eot?lylkzd#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?lylkzd') format('truetype'),
-      url('fonts/icomoon.woff?lylkzd') format('woff'),
-      url('fonts/icomoon.svg?lylkzd#icomoon') format('svg');
+    src:  url('fonts/icomoon.eot?mluqqe');
+    src:  url('fonts/icomoon.eot?mluqqe#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?mluqqe') format('truetype'),
+      url('fonts/icomoon.woff?mluqqe') format('woff'),
+      url('fonts/icomoon.svg?mluqqe#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -31,17 +31,25 @@
   
   .icon-menu:before {
     content: "\e9bd";
-       font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  .icon-linkedin:before {
+    content: "\eac9";
   }
   
+/* estilos que repito mucho*/
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* estilos que repito mucho*/
+
 .presentation-container{
     display: grid;
     grid-template: 1fr / 1.1fr 0.9fr;
@@ -51,9 +59,6 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 25px;
     position: fixed;
     right: 0;
@@ -295,11 +300,13 @@
 .projects-secti{
     width: 100%;
 }
-.projects-container{
+.projects-container, 
+.contact-container{
     margin: 5%;
     display: grid;
 }
-.projects-title{
+.projects-title, 
+.contact-title{
     font-size: 30px;
     font-weight: bold;
     font-family: 'Inconsolata', monospace;
@@ -326,11 +333,13 @@
 }
 .projects-card-img{
     width: 100%;
-    height: 250px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
 }
 .projects-card-description{
     color:#fff;
-    padding:10px;
+    padding:20px;
     background: rgba(0, 0, 0, 0.815);
     font-size:18px;
     font-family: 'Raleway', cursive;
@@ -340,7 +349,108 @@
     bottom:0;
     left:0;
     right:0;
+}
+.contact-form{
+   justify-content: space-around;
+   padding: 0 10%;
+}
+.red{
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    width: 100px;
+    height: 100px;
+}
+.line{
+    position: absolute;
+    background-color: #000;
+    transition: all .5s;
+}
+.line.one{
+    width: 100%;
+    height: 1px;
+    top:0;
+    left: 0;
+    transform-origin: right;
+}
+.red:hover .line.one{
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .7s;
+}
+.line.three{
+    width: 100%;
+    height: 1px;
+    bottom:0;
+    left: 0;
+    transform-origin: left;
+}
+.red:hover .line.three{
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all .7s;
+}
+.line.two{
+    width: 1px;
+    height: 100%;
+    top:0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+.red:hover .line.two{
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: all .7s;
+}
+.line.four{
+    width: 1px;
+    height: 100%;
+    top:0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.red:hover .line.four{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: all .5s;
+}
+.red a{
+    text-decoration: none;
+    font-size:90px;
+    color: #4a4d4d;
+}
+.red:hover .icon-github{
+    color:#000; 
+    transition: .5s;
+}
+.red:hover .icon-twitter{
+    color:#38A1F3;
+    transition: .5s;
+}
+.red:hover .icon-linkedin{
+    color:#0e76a8;
+    transition: .5s;
+}
+footer{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(19, 19, 19, 0.986);
+    font-size: 20px;
+    color: #fff;
+}
+.footer-student-img-container{
+    width: 100px;
+    
+}
+.footer-student-img{
+    width: 100%;
+}
+.footer-student,
+.footer-finishh{
+    margin: 0 20px;
 }
